@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose sign-in method",
+        "description": "SMS is recommended. The integration refreshes tokens automatically.",
+        "data": {
+          "login_method": "Sign-in method"
+        }
+      },
+      "sms_phone": {
+        "title": "Sign in with SMS",
+        "description": "Enter the phone number of your TCL account. A verification code will be sent.",
+        "data": {
+          "phone": "Phone number"
+        }
+      },
+      "sms_code": {
+        "title": "Enter verification code",
+        "description": "Code sent to {phone}, valid for 5 minutes.",
+        "data": {
+          "code": "Verification code"
+        }
+      },
+      "password": {
+        "title": "Sign in with password",
+        "data": {
+          "phone": "Phone number",
+          "password": "Password"
+        }
+      },
+      "token": {
+        "title": "Sign in with token",
+        "description": "{hint}",
+        "data": {
+          "account_id": "accountId",
+          "refresh_token": "refreshToken",
+          "access_token": "accessToken (optional, refreshed automatically)"
+        }
+      }
+    },
+    "error": {
+      "auth_error": "Incorrect account, password or verification code",
+      "cannot_connect": "Cannot reach TCL cloud, check your network and retry",
+      "sms_error": "Failed to send the verification code, try again later",
+      "unknown": "Unknown error"
+    },
+    "abort": {
+      "already_configured": "This TCL account is already configured",
+      "reauth_successful": "Re-authentication successful"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "TCL Air Plus options",
+        "description": "{power_hint}. {poll_hint}. {beep_hint}.",
+        "data": {
+          "poll_interval": "Polling interval (seconds)",
+          "power_inverted": "Invert power state",
+          "beep_mute": "Mute: append beep-off to every command",
+          "expose_all_entities": "Expose read-only values as sensors"
+        }
+      }
+    }
+  }
+}
