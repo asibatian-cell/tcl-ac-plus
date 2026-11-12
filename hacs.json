@@ -1,0 +1,7 @@
+{
+  "name": "TCL 空调 Plus",
+  "domains": ["tcl_ac_plus"],
+  "homeassistant": "2024.6.0",
+  "render_readme": true,
+  "zip_release": false
+}
