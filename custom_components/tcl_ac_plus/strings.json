@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "选择登录方式",
+        "description": "推荐使用短信验证码登录，插件会自动刷新 token，不需要反复重新配置。",
+        "data": {
+          "login_method": "登录方式"
+        }
+      },
+      "sms_phone": {
+        "title": "短信验证码登录",
+        "description": "填写 TCL 智家 / TCL+ 账号的手机号，点击提交后会收到验证码。",
+        "data": {
+          "phone": "手机号"
+        }
+      },
+      "sms_code": {
+        "title": "输入验证码",
+        "description": "验证码已发送至 {phone}，5 分钟内有效。",
+        "data": {
+          "code": "验证码"
+        }
+      },
+      "password": {
+        "title": "密码登录",
+        "data": {
+          "phone": "手机号",
+          "password": "密码"
+        }
+      },
+      "token": {
+        "title": "使用 Token 登录",
+        "description": "{hint}",
+        "data": {
+          "account_id": "accountId",
+          "refresh_token": "refreshToken",
+          "access_token": "accessToken（可留空，会自动刷新）"
+        }
+      }
+    },
+    "error": {
+      "auth_error": "账号或密码/验证码不正确",
+      "cannot_connect": "无法连接 TCL 云端，请检查网络后重试",
+      "sms_error": "验证码发送失败，请稍后重试",
+      "unknown": "未知错误"
+    },
+    "abort": {
+      "already_configured": "该 TCL 账号已配置",
+      "reauth_successful": "重新登录成功"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "TCL 空调 Plus 选项",
+        "description": "{power_hint}。{poll_hint}。{beep_hint}。",
+        "data": {
+          "poll_interval": "轮询间隔（秒）",
+          "power_inverted": "电源状态取反",
+          "beep_mute": "静音：指令附带关闭空调提示音",
+          "expose_all_entities": "把只读数值也暴露为传感器"
+        }
+      }
+    }
+  }
+}
